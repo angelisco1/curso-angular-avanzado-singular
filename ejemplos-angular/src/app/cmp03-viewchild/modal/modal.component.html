@@ -1,0 +1,6 @@
+<div class="backdrop" *ngIf="!oculto">
+  <div class="modal">
+    <ng-content></ng-content>
+    <button type="button" (click)="cerrar()">Cerrar</button>
+  </div>
+</div>

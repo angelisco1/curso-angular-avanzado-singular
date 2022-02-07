@@ -1,0 +1,17 @@
+<app-modal>
+  <ng-template appHost></ng-template>
+</app-modal>
+
+<ul>
+  <li *ngFor="let item of mediaItems" (click)="mostrarModal(item)">
+    {{item.titulo}}
+  </li>
+</ul>
+
+<hr>
+
+<a [appMiRouterLink]="['/']">Inicio</a>
+<a [appMiRouterLink]="['/transclusion']">Transclusión</a>
+<a [appMiRouterLink]="['/modal']">Modal</a>
+
+<app-mi-router-outlet></app-mi-router-outlet>
