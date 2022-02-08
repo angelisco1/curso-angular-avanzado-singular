@@ -6,7 +6,7 @@ import { MiRouterModule } from "./mi-router.module";
 const MIS_RUTAS = [
   { path: '', component: InicioComponent },
   { path: 'transclusion', component: Cmp02TransclusionComponent },
-  { path: 'modal', component: Cmp03ViewchildComponent },
+  { path: 'modal', component: Cmp03ViewchildComponent }
 ]
 
-MiRouterModule.forRoot(MIS_RUTAS)
+export const MiRoutingModule = MiRouterModule.forRoot(MIS_RUTAS)

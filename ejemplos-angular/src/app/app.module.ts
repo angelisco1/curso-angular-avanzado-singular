@@ -14,6 +14,7 @@ import { VideoComponent } from './cmp04-componentes-dinamicos/video/video.compon
 import { AudioComponent } from './cmp04-componentes-dinamicos/audio/audio.component';
 import { HostDirective } from './cmp04-componentes-dinamicos/host.directive';
 import { MiRouterModule } from './cmp04-componentes-dinamicos/mi-router/mi-router.module';
+import { MiRoutingModule } from './cmp04-componentes-dinamicos/mi-router/mi-router.routes';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { MiRouterModule } from './cmp04-componentes-dinamicos/mi-router/mi-route
     Cmp04ComponentesDinamicosComponent,
     VideoComponent,
     AudioComponent,
-    HostDirective
+    HostDirective,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    MiRouterModule,
+    // MiRouterModule,
+    MiRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
