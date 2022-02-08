@@ -29,5 +29,18 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "tareas-api",
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxAge": "3m",
+        "maxSize": 10
+      },
+      "urls": [
+        "https://ejemplos-dc1c1.firebaseio.com/angular-sngular/tareas/angel"
+      ]
+    }
   ]
 }
