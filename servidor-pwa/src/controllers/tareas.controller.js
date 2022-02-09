@@ -1,5 +1,6 @@
 const webpush = require('web-push')
 const Tarea = require('../models/tarea')
+const Suscripcion = require('../models/suscripcion')
 
 
 exports.createTarea = (req, res) => {
@@ -18,14 +19,18 @@ exports.createTarea = (req, res) => {
         }
       }
 
-      // const suscripcion = {}
-      // webpush.sendNotification(suscripcion, payload)
-      //   .then(() => {
-      //     console.log('Notificación enviada')
-      //   })
-      //   .catch(err => {
-      //     console.log('Error al enviar la notificación', err)
-      //   })
+      Suscripcion.getSuscripciones()
+        .then((suscripciones) => {
+          suscripciones.forEach(suscripcion => {
+            webpush.sendNotification(suscripcion, JSON.stringify(payload))
+              .then(() => {
+                console.log('Notificación enviada')
+              })
+              .catch(err => {
+                console.log('Error al enviar la notificación', err)
+              })
+          })
+        })
 
       return res.status(201).json({name: tarea.id})
     })

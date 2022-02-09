@@ -1,8 +1,8 @@
 {
-  "name": "ejemplos-angular-pwa",
-  "short_name": "ejemplos-angular-pwa",
+  "name": "Tareas, terminalas cuanto antes",
+  "short_name": "Tareas",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

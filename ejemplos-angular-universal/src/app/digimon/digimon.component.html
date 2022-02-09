@@ -1,0 +1,5 @@
+<div>
+  <h2>{{digimon.name}}</h2>
+  <img [src]="digimon.img" width="200" alt="Imagen de {{digimon.name}}">
+  <p>Level: <a [routerLink]="['/levels', digimon.level]">{{digimon.level}}</a></p>
+</div>

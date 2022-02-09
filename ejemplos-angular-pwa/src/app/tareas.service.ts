@@ -35,6 +35,7 @@ export class TareasService {
   }
 
   createTarea(nuevaTarea: any): Observable<any> {
-    return this.http.post(`${this.URL}.json`, nuevaTarea)
+    // return this.http.post(`${this.URL}.json`, nuevaTarea)
+    return this.http.post('http://localhost:3000/tareas', nuevaTarea)
   }
 }

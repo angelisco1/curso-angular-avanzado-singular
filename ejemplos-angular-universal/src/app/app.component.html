@@ -1,0 +1,10 @@
+<ul>
+  <li>
+    <a [routerLink]="['/']">Inicio</a>
+  </li>
+  <li *ngFor="let level of levels">
+    <a [routerLink]="['/levels', level]">{{level | titlecase}}</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

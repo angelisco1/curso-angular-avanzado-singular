@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SwPush } from '@angular/service-worker';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  URL: string = environment.url_notis
 
   constructor(private swPush: SwPush, private http: HttpClient) {
     this.pedirPermisoNotificaciones()
@@ -19,9 +21,11 @@ export class AppComponent {
     })
       .then((suscripcion: PushSubscription) => {
         console.log(suscripcion)
-        // this.http.post()
+        this.http.post(`${this.URL}.json`, suscripcion)
+          .subscribe(() => {
+            console.log('Suscrito a las notificacion PUSH')
+          })
       })
   }
-
 
 }
