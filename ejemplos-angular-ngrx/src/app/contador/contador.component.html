@@ -1,0 +1,5 @@
+<p>Cuenta: {{cuenta$ | async}}</p>
+<p>CuentaX2: {{cuentaX2$ | async}}</p>
+<button type="button" (click)="decrementar()">-</button>
+<button type="button" (click)="incrementar()">+</button>
+<input type="number" (change)="cambiarCuenta($event)">

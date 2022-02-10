@@ -1,6 +1,8 @@
 import 'zone.js/dist/zone-node';
 import { config } from 'dotenv'
 config()
+import 'localstorage-polyfill';
+
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
@@ -11,6 +13,8 @@ import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
 import AppRoutes from './server/app.routes'
+
+global['localStorage'] = localStorage;
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {

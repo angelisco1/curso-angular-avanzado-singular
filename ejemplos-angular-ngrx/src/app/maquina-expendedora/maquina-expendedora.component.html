@@ -1,0 +1,5 @@
+<p *ngIf="cargando$ | async; else listaProductos">Cargando productos en la máquina...</p>
+
+<ng-template #listaProductos>
+  <app-lista-productos></app-lista-productos>
+</ng-template>

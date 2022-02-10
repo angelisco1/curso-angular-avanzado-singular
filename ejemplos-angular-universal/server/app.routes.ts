@@ -24,8 +24,7 @@ router.post('/login', (req, res) => {
 
 })
 
-
-router.use((req, res, next) => {
+router.use('/api', (req, res, next) => {
   const authHeader = req.headers.authorization
 
   if (!authHeader) {
@@ -48,7 +47,7 @@ router.use((req, res, next) => {
 })
 
 
-router.get('/datos', (req, res) => {
+router.get('/api/datos', (req, res) => {
   return res.json({datos: [1, 2, 3, 4, 5, 6]})
 })
 

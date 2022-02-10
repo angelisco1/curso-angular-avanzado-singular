@@ -1,0 +1,18 @@
+<button (click)="logout()" *ngIf="isLoggedIn; else formulario">Logout</button>
+
+<ng-template #formulario>
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</ng-template>
+
+<h2>Datos de la API de Universal</h2>
+<pre>{{datosUniversal$ | async | json}}</pre>

@@ -7,4 +7,8 @@
   </li>
 </ul>
 
+<p *ngIf="nombreUsuario$ | async as nombre">Bienvenid@ {{nombre}}</p>
+
+<app-login></app-login>
+
 <router-outlet></router-outlet>
