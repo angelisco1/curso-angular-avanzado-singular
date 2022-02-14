@@ -1,4 +1,6 @@
-<app-producto
+<div [ngStyle]="{display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap'}">
+  <app-producto
   *ngFor="let producto of productos"
-></app-producto>
-<!-- [producto]="producto" -->
+  [producto]="producto"
+  ></app-producto>
+</div>

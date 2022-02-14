@@ -1,1 +1,4 @@
-<p>panel-codigo works!</p>
+
+<label for="codigo">Introduce el código del producto:</label>
+<input type="text" #codigo>
+<button type="button" (click)="sacarProducto(codigo.value)">Sacar producto</button>

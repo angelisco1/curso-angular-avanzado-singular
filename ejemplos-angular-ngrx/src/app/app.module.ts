@@ -13,6 +13,7 @@ import { PanelCodigoComponent } from './maquina-expendedora/panel-codigo/panel-c
 import { PanelEstadoComponent } from './maquina-expendedora/panel-estado/panel-estado.component';
 import { APP_REDUCERS } from './state/app.state';
 import { HttpClientModule } from '@angular/common/http';
+import { MaquinaExpendedoraEffects } from './state/effects/maquina-expendedora.effects';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     StoreModule.forRoot(APP_REDUCERS, {}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([MaquinaExpendedoraEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

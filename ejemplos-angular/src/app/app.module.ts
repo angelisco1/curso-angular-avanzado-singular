@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { RoutingModule } from './app.routes';
@@ -15,6 +16,10 @@ import { AudioComponent } from './cmp04-componentes-dinamicos/audio/audio.compon
 import { HostDirective } from './cmp04-componentes-dinamicos/host.directive';
 import { MiRouterModule } from './cmp04-componentes-dinamicos/mi-router/mi-router.module';
 import { MiRoutingModule } from './cmp04-componentes-dinamicos/mi-router/mi-router.routes';
+import { Cmp05AnimacionesComponent } from './cmp05-animaciones/cmp05-animaciones.component';
+import { CmpZoomComponent } from './cmp05-animaciones/cmp-zoom/cmp-zoom.component';
+import { CmpShakeComponent } from './cmp05-animaciones/cmp-shake/cmp-shake.component';
+import { Cmp06InternacionalizacionComponent } from './cmp06-internacionalizacion/cmp06-internacionalizacion.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +34,17 @@ import { MiRoutingModule } from './cmp04-componentes-dinamicos/mi-router/mi-rout
     VideoComponent,
     AudioComponent,
     HostDirective,
+    Cmp05AnimacionesComponent,
+    CmpZoomComponent,
+    CmpShakeComponent,
+    Cmp06InternacionalizacionComponent,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     // MiRouterModule,
     MiRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

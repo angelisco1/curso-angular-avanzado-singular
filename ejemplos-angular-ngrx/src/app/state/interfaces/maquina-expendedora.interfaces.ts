@@ -11,6 +11,9 @@ export interface IMaquinaExpState {
   fueraDeServicio: boolean,
   totalRecaudado: number,
   totalStock: number,
+}
+
+export interface IPanelPagoState {
   dineroIngresado: number,
   dineroADevolver: number,
 }

@@ -1,1 +1,7 @@
-<p>panel-pago works!</p>
+<div>
+  <p>Dinero ingresado: {{dineroIngresado$ | async}}</p>
+  <button type="button" (click)="ingresar(1)">1€</button>
+  <button type="button" (click)="ingresar(2)">2€</button>
+  <button type="button" (click)="ingresar(5)">5€</button>
+  <button type="button" (click)="ingresar(10)">10€</button>
+</div>

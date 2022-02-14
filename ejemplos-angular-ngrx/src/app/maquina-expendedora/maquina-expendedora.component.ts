@@ -15,15 +15,16 @@ import { ProductosService } from './productos.service';
 export class MaquinaExpendedoraComponent implements OnInit {
   cargando$!: Observable<boolean>
 
-  constructor(private store$: Store<IAppState>, private productosApi: ProductosService) { }
+  // constructor(private store$: Store<IAppState>, private productosApi: ProductosService) { }
+  constructor(private store$: Store<IAppState>) { }
 
   ngOnInit(): void {
     this.cargando$ = this.store$.select(selectCargando$)
     this.store$.dispatch(cargarMaquina())
-    this.productosApi.getProductos()
-      .subscribe((productos: Array<IProducto>) => {
-        this.store$.dispatch(maquinaCargada({productos}))
-      })
+    // this.productosApi.getProductos()
+    //   .subscribe((productos: Array<IProducto>) => {
+    //     this.store$.dispatch(maquinaCargada({productos}))
+    //   })
 
   }
 
