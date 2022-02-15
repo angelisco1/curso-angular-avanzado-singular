@@ -3,7 +3,7 @@
 <form [formGroup]="formTarea" (ngSubmit)="guardar()">
   <div>
     <label for="titulo">Nueva tarea</label>
-    <input type="text" id="titulo" formControlName="titulo">
+    <input type="text" data-cy="titulo" id="titulo" formControlName="titulo">
   </div>
   <button type="submit" [disabled]="formTarea.invalid">Guardar</button>
 </form>

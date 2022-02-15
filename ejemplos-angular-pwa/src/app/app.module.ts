@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 import { TareasComponent } from './tareas/tareas.component';
 import { TareaComponent } from './tarea/tarea.component';
 import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
+import { TareaItemComponent } from './tarea-item/tarea-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TareasComponent,
     TareaComponent,
-    NuevaTareaComponent
+    NuevaTareaComponent,
+    TareaItemComponent
   ],
   imports: [
     BrowserModule,

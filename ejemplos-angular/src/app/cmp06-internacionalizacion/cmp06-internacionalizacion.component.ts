@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cmp06-internacionalizacion.component.css']
 })
 export class Cmp06InternacionalizacionComponent implements OnInit {
-  // languages = [
-  //   { texto: 'EN', },
-  //   { texto: 'ES', },
-  //   { texto: 'FR', },
-  // ]
+  languages = [
+    { texto: 'EN', codigo: '/en-US' },
+    { texto: 'ES', codigo: '/es' },
+    { texto: 'FR', codigo: '/fr' },
+  ]
   constructor() { }
 
   ngOnInit(): void {

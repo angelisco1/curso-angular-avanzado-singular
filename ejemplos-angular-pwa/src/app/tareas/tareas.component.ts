@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { TareasService } from '../tareas.service';
 
 @Component({
@@ -8,12 +8,18 @@ import { TareasService } from '../tareas.service';
   styleUrls: ['./tareas.component.css']
 })
 export class TareasComponent implements OnInit {
-  tareas$!: Observable<any>
+  listaTareas!: Array<any>
 
   constructor(private tareas: TareasService) {}
 
   ngOnInit(): void {
-    this.tareas$ = this.tareas.getTareas()
+    this.tareas.getTareas()
+      .pipe(
+        delay(3000)
+      )
+      .subscribe((datos) => {
+        this.listaTareas = datos
+      })
   }
 
 }

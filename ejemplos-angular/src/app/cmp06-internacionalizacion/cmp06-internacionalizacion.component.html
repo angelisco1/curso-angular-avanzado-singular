@@ -1,6 +1,8 @@
 <ul>
-
+  <li *ngFor="let lang of languages">
+    <a [href]="lang.codigo">{{lang.texto}}</a>
+  </li>
 </ul>
 
-<p>Hello world</p>
+<p i18n>Hello world</p>
 <p>{{10 | currency}}</p>
